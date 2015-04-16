@@ -1,6 +1,6 @@
 # r-lang-worker-example
 
-Hello world for R on IronWorker
+Hello world for R on IronWorker using the r-base Docker image.
 
 ## Getting Started
 
