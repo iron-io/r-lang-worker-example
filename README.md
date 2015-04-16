@@ -1,4 +1,5 @@
 # r-lang-worker-example
+
 Hello world for R on IronWorker
 
 ## Getting Started
@@ -13,13 +14,13 @@ Then upload to IronWorker:
 
 ```
 zip -r helloR.zip *
-ironcli upload helloR.zip Rscript hello.R
+iron worker upload helloR.zip Rscript hello.R
 ```
 
 Then queue it:
 
-``` 
-ironcli queue helloR
+```
+iron worker queue helloR
 ```
 
 ## Using R Packages
@@ -36,7 +37,7 @@ Fire up the interactive shell:
 docker run -ti --rm  -v "$(pwd)":/home/docker -w /home/docker -u docker r-base
 ```
 
-Then run: 
+Then run:
 
 ```sh
 install.packages("car", lib="./Rpackages")
@@ -48,5 +49,4 @@ Then in your script, you'd use (see pkgtest.R):
 library(car, lib.loc="./Rpackages")
 ```
 
-Then upload/queue as above with hello.R. 
-
+Then upload/queue as above with hello.R.
