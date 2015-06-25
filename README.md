@@ -14,7 +14,7 @@ Then upload to IronWorker:
 
 ```
 zip -r helloR.zip *
-iron worker upload helloR.zip Rscript hello.R
+iron worker upload --zip helloR.zip --name helloR r-base Rscript hello.R
 ```
 
 Then queue it:
